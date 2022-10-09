@@ -33,7 +33,7 @@ layout: default
         <img    src="{{'assets/images/image-intro-desktop.jpg ' | relative_url }}"
         class="hero__image2" >
       <div class="hero__intro ">
-          <h1 class="hero__title">Humanizing your insurance.</h1>
+          <h1 class="hero__title">Hu22manizing your insurance.</h1>
           <p class="hero__text">Get your life insurance coverage easier and faster. We blend our
           expertise and technology to help you find the plan that’s right for
           you. Ensure you and your loved ones are protected.</p>
