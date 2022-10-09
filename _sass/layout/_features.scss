@@ -92,9 +92,9 @@
       text-align: center;
     }
 
-    @include breakpoint-between(medium) {
-      max-width: 394px;
-    }
+    // @include breakpoint-between(medium) {
+    //   max-width: 394px;
+    // }
 
     @include breakpoint-up(large) {
       text-align: left;

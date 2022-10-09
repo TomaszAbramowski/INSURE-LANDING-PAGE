@@ -332,8 +332,6 @@ source { display: block; }
 
 @media (min-width: 40em) { .feature__article { text-align: center; } }
 
-@media ((max-width: 56.25em) and (min-width: 40em)) { .feature__article { max-width: 394px; } }
-
 @media (min-width: 56.25em) { .feature__article { text-align: left; } }
 
 .feature__article--img { padding-top: 3.4225rem; padding-bottom: 2rem; }
@@ -443,5 +441,3 @@ source { display: block; }
 @media (min-width: 40em) { .more--cta { width: 45%; max-width: 10rem; min-width: 160px; margin-bottom: 0.0625px; } }
 
 body { margin: 0 auto; min-width: 376px; }
-
-/*# sourceMappingURL=main.css.map */
