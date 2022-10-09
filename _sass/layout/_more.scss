@@ -1,0 +1,128 @@
+@use "../abstracts/variable" as *;
+@use "../abstracts/mixins" as *;
+
+.more {
+  position: relative;
+  background-color: $darkViolet;
+  z-index: $zIndexAbovePattern;
+  text-align: center;
+
+  padding-top: 4.54rem;
+  padding-bottom: 5.15rem;
+
+  margin-left: clamp(#{"1.525rem, 13.5vw - 1.65625rem, 10.375rem"});
+  margin-right: clamp(#{"1.525rem, 13.5vw - 1.65625rem, 10.375rem"});
+
+  max-width: 1110px;
+
+  @include breakpoint-up(medium) {
+    max-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    margin-top: 1.18rem;
+  }
+
+  @include breakpoint-up(large) {
+    padding-left: 5rem;
+    padding-right: 4.875rem;
+  }
+  @include breakpoint-up(veryLarge) {
+    padding-top: 5.1025rem;
+    padding-bottom: 5.15rem;
+    margin-right: calc(1.525rem, 13.5vw - 1.65625rem, 10.25rem);
+
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../images/bg-pattern-how-we-work-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 65%;
+    z-index: $zIndexPattern;
+
+    @include breakpoint-up(large) {
+      width: 100%;
+      background-image: url("../images/bg-pattern-how-we-work-desktop.svg");
+      z-index: $zIndexPattern;
+    }
+  }
+
+  &--title {
+    color: white;
+    position: relative;
+    padding-bottom: 3.185rem;
+    font-weight: 400;
+    font-size: 250%;
+    line-height: 1;
+    letter-spacing: -0.3px;
+    z-index: $zIndexAbovePattern;
+    @include breakpoint-down(small) {
+      max-width: 25rem;
+      margin: 0 auto;
+    }
+
+    @include breakpoint-up(medium) {
+      text-align: left;
+      max-width: 25rem;
+      margin-right: 2rem;
+      padding-bottom: 0;
+    }
+
+    @include breakpoint-up(large) {
+      width: 50%;
+
+      font-size: 350%;
+      max-width: 29.5rem;
+    }
+
+    @include breakpoint-up(large) {
+      width: 100%;
+
+      max-width: 30rem;
+      letter-spacing: -0.6px;
+    }
+  }
+
+  &--cta {
+    position: relative;
+    z-index: $zIndexAbovePattern;
+
+    font-weight: 400;
+    color: white;
+    border: 1px solid white;
+    letter-spacing: 1px;
+    word-spacing: 0.5px;
+    padding-left: 1.375rem;
+    padding-right: 1.4925rem;
+    padding-bottom: 0.625rem;
+    padding-top: 0.7rem;
+
+    &:hover {
+      transition: all 0.2s ease-in-out;
+      background-color: white;
+      color: black;
+      border: none;
+      outline: 0;
+      outline-offset: 0;
+    }
+
+    @include breakpoint-up(medium) {
+      width: 45%;
+      max-width: 10rem;
+      min-width: 160px;
+      margin-bottom: 0.0625px;
+    }
+  }
+}

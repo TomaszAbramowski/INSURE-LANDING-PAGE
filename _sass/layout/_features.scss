@@ -1,0 +1,145 @@
+@use "../abstracts/variable" as *;
+@use "../abstracts/mixins" as *;
+
+.feature {
+  margin-top: 11.0875rem;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
+
+  @include breakpoint-up(medium) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  @include breakpoint-up(large) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  @include breakpoint-up(larger) {
+    padding-left: 10.375rem;
+    padding-right: 10.2975rem;
+  }
+
+  @include breakpoint-up(large) {
+    margin-top: 22.4375rem;
+  }
+
+  @include breakpoint-up(veryLarge) {
+    margin-top: 22.4375rem;
+  }
+
+  &__grid {
+    @include breakpoint-up(medium) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(1fr, 0.5fr);
+      gap: 1.8rem;
+      justify-items: center;
+    }
+    @include breakpoint-up(large) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__title {
+    position: relative;
+
+    font-size: 300%;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    word-spacing: -1.5px;
+    text-align: center;
+
+    @include breakpoint-up(medium) {
+      display: block;
+    }
+    @include breakpoint-up(large) {
+      font-size: 450%;
+      letter-spacing: -1px;
+      text-align: left;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      border-top: 1px solid black;
+      top: -2.285rem;
+      width: 49%;
+      left: 50%;
+      transform: translate(-50%);
+
+      @include breakpoint-down(medium) {
+        max-width: 10.6rem;
+      }
+
+      @include breakpoint-up(large) {
+        display: block;
+        text-align: left;
+        transform: translate(0);
+        left: 0;
+        width: 9.5rem;
+        top: -3.375rem;
+      }
+    }
+  }
+
+  &__article {
+    @include breakpoint-down(small) {
+      text-align: center;
+    }
+
+    @include breakpoint-up(medium) {
+      text-align: center;
+    }
+
+    @include breakpoint-between(medium) {
+      max-width: 394px;
+    }
+
+    @include breakpoint-up(large) {
+      text-align: left;
+    }
+
+    &--img {
+      padding-top: 3.4225rem;
+      padding-bottom: 2rem;
+
+      @include breakpoint-up(large) {
+        padding-top: 5.4225rem;
+      }
+    }
+
+    &:first-of-type > img {
+      @include breakpoint-down(small) {
+        padding-top: 4.86rem;
+      }
+    }
+
+    &--title {
+      padding-bottom: 1.1rem;
+      letter-spacing: 0.75px;
+      font-size: 175%;
+      letter-spacing: -0.5px;
+      word-spacing: 1px;
+      font-weight: 400;
+    }
+
+    &--text {
+      line-height: 1.65;
+      @include breakpoint-down(small) {
+        max-width: 30rem;
+        margin: 0 auto;
+      }
+    }
+
+    @include breakpoint-down(medium) {
+      &:last-of-type {
+        grid-column: 1 / span 2;
+      }
+    }
+  }
+
+  .feature__article:last-of-type {
+    margin-bottom: 8.66rem;
+  }
+}

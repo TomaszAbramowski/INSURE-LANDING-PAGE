@@ -1,0 +1,103 @@
+@use "../abstracts/variable" as *;
+@use "../abstracts/mixins" as *;
+
+.header {
+  position: relative;
+  nav {
+    min-height: 4.68rem;
+  }
+
+  @include breakpoint-up(large) {
+    padding-bottom: 0.3rem;
+  }
+
+  &__links {
+    @include breakpoint-up(large) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &--item {
+      margin-right: 1.68rem;
+      list-style: none;
+
+      @include breakpoint-up(large) {
+        margin-right: 1.5rem;
+
+        &:last-of-type {
+          margin-right: 2.18rem;
+        }
+      }
+
+      & > a {
+        letter-spacing: 2px;
+        color: $darkGrayishViolet;
+        font-size: 0.7rem;
+        text-decoration: none;
+        transition: all 0.2s ease-in-out;
+        @include breakpoint-up(large) {
+          font-size: 0.85rem;
+          font-weight: 700;
+          letter-spacing: 1px;
+          word-spacing: 1px;
+        }
+
+        &:hover {
+          color: black;
+        }
+      }
+    }
+  }
+
+  &__button {
+    position: relative;
+
+    &--mobile {
+      position: relative;
+      right: 2.03125rem;
+      bottom: 1.125rem;
+    }
+    @include breakpoint-up(large) {
+      padding-left: 1.625rem;
+      padding-bottom: 0.66rem;
+    }
+  }
+
+  &__menu {
+    position: fixed;
+    z-index: 9999;
+    margin-top: 5.65rem;
+    padding: 0;
+    top: -1rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $darkViolet;
+
+    &--item {
+      list-style: none;
+      text-align: center;
+      margin-bottom: 3.125rem;
+      &:first-of-type {
+        margin-top: 3.37rem;
+      }
+
+      & > a {
+        font-weight: 400;
+        letter-spacing: 2px;
+        color: white;
+        text-decoration: none;
+        transition: all 200ms ease-in-out;
+
+        &:hover {
+       
+          border: 1px solid white;
+          padding: 0.75rem 5rem;
+
+       
+        }
+      }
+    }
+  }
+}

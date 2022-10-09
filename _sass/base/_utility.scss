@@ -1,0 +1,96 @@
+// @use "../abstracts/mixins" as *;
+@import "../abstracts/mixins";
+
+.stop-scroll {
+  overflow: hidden;
+}
+
+.open {
+  position: absolute;
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.2s ease-in;
+}
+
+.close {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s ease-in;
+}
+
+.hide-for-mobile {
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include breakpoint-up(large) {
+    display: none;
+  }
+}
+
+.flex {
+  display: flex;
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+}
+
+.container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1.375rem;
+  padding-bottom: 1.3875rem;
+
+  @include breakpoint-up(medium) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  @include breakpoint-up(large) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  @include breakpoint-up(larger) {
+    padding-left: 10.5rem;
+    padding-top: 1.375rem;
+    padding-bottom: 0.825rem;
+    padding-right: 10.2975rem;
+  }
+
+  &--px {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+    @include breakpoint-up(large) {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+
+    @include breakpoint-up(veryLarge) {
+      padding-left: 10.5rem;
+      padding-right: 10.61rem;
+    }
+  }
+
+  &--pt {
+    padding-top: 1.5rem;
+  }
+}
+
+.margin {
+  &--bottom {
+    margin-bottom: 10rem;
+  }
+}

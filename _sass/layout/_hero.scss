@@ -1,0 +1,266 @@
+@use "../abstracts/variable" as *;
+@use "../abstracts/mixins" as *;
+
+source {
+  display: block;
+}
+
+.hero {
+  position: relative;
+  z-index: $zIndexAbovePattern;
+
+  @include breakpoint-up(medium) {
+    text-align: left;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    justify-content: space-between;
+    max-height: 30rem;
+  }
+
+  @include breakpoint-up(large) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    max-height: 32rem;
+  }
+
+  @include breakpoint-up(larger) {
+    padding-right: 10.2975rem;
+    padding-left: 10.25rem;
+    max-height: 37.5rem;
+  }
+
+  @include breakpoint-up(medium) {
+    display: flex;
+  }
+
+  background-color: $darkViolet;
+  &__image {
+    position: relative;
+    background-image: url(../images/image-intro-mobile.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    @include breakpoint-up(large) {
+      background-image: url(../images/image-intro-desktop.jpg);
+      background-size: 80% 80%;
+      width: 40%;
+      order: 2;
+      top: 3rem;
+      left: 5%;
+    }
+
+    @include breakpoint-up(veryLarge) {
+      top: 6.5625rem;
+      width: 48.6%;
+      max-width: 50rem;
+      height: 40.625rem;
+    }
+  }
+
+  &__image2 {
+    width: 100%;
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+
+    @include breakpoint-up(medium) {
+      position: relative;
+      object-position: top;
+      order: 2;
+      width: 45%;
+      height: 100%;
+      margin-top: 106px;
+    }
+
+    @include breakpoint-up(veryLarge) {
+      width: 48.6%;
+    }
+  }
+  &__intro {
+    color: white;
+    text-align: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("../images/bg-pattern-intro-left-mobile.svg");
+      background-repeat: no-repeat;
+      background-position: left top;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      z-index: $zIndexPattern;
+
+      @include breakpoint-up(large) {
+        background-image: url("../images/bg-pattern-intro-right-desktop.svg");
+        height: 100%;
+        width: 100%;
+        background-position: 100% -5rem;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../images/bg-pattern-intro-right-mobile.svg");
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      height: 100%;
+      width: 100%;
+      bottom: -10.9875rem;
+      right: 0;
+      z-index: $zIndexPattern;
+
+      @include breakpoint-up(large) {
+        background-image: url("../images/bg-pattern-intro-left-desktop.svg");
+        background-position: left bottom;
+        left: 0;
+        top: 20.7875rem;
+      }
+    }
+
+    @include breakpoint-down(small) {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    @include breakpoint-up(medium) {
+      padding-left: 0rem;
+      text-align: left;
+      width: 24rem;
+    }
+
+    @include breakpoint-up(large) {
+      width: 55%;
+      text-align: left;
+      max-width: 535px;
+    }
+
+    @include breakpoint-up(veryLarge) {
+      width: 49.5%;
+      min-width: 31.25rem;
+    }
+  }
+
+  &__title {
+    position: relative;
+    font-size: 300%;
+    font-weight: 400;
+    letter-spacing: -0.6px;
+    padding-top: 5.822rem;
+    z-index: $zIndexAbovePattern;
+
+    line-height: 0.9;
+    color: white;
+    text-align: center;
+
+    @include breakpoint-down(small) {
+      max-width: 344px;
+      margin: 0 auto;
+      line-height: 1;
+    }
+
+    @include breakpoint-up(medium) {
+      font-size: 250%;
+      text-align: left;
+      padding-top: 9rem;
+    }
+
+    @include breakpoint-up(large) {
+      text-align: left;
+      font-size: 350%;
+
+      padding-top: 10.54rem;
+      letter-spacing: -1px;
+    }
+
+    @include breakpoint-up(larger) {
+      font-size: 450%;
+      padding-right: 0.2rem;
+    }
+
+    @include breakpoint-up(medium) {
+      text-align: left;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        border-top: white 1px solid;
+        width: 1rem;
+        height: 1rem;
+        top: 6.5625rem;
+        width: 27.29%;
+      }
+    }
+  }
+
+  &__text {
+    position: relative;
+    padding-top: 1rem;
+    line-height: 1.6;
+    z-index: $zIndexAbovePattern;
+    text-align: center;
+
+    @include breakpoint-down(small) {
+      max-width: 30.25rem;
+      margin: 0 auto;
+      padding-top: 1rem;
+      padding-left: 0.1rem;
+      padding-right: 0.2rem;
+      line-height: 1.62;
+    }
+
+    @include breakpoint-up(medium) {
+      text-align: left;
+      padding-right: 1rem;
+    }
+
+    @include breakpoint-up(large) {
+      text-align: left;
+      padding-left: 0;
+
+      display: inline-block;
+      padding-top: 1.6625rem;
+      word-spacing: 0.3px;
+    }
+
+    @include breakpoint-up(larger) {
+      padding-right: 0;
+    }
+  }
+
+  &__button {
+    color: white;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    z-index: $zIndexAbovePattern;
+    margin-top: 2.075rem;
+    margin-bottom: 5.7595rem;
+    outline: 1px solid gray;
+
+    border: 1px solid white;
+    padding: 0.7rem 1.68rem;
+    @include breakpoint-up(large) {
+      margin-top: 1.98rem;
+      padding-bottom: 0.575rem;
+      text-align: left;
+
+      &:hover {
+        transition: all 0.2s ease-in-out;
+        background-color: white;
+        color: black;
+        border: none;
+        outline: 0;
+        outline-offset: 0;
+      }
+    }
+  }
+}

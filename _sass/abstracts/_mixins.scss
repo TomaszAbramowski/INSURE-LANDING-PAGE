@@ -1,0 +1,41 @@
+//at this point and bigger use these styles
+// 640px, 900px 1100px px, 1440px
+$breakpoints-up: (
+  "medium": "40em",
+  "large": "56.25em",
+  "larger": "79.375em",
+  "veryLarge": "90em",
+);
+
+//but there some cases where you want to target a style from a certain
+//viewpornt end on
+// 639px, 899px, 1439px
+$breakpoints-down: (
+  "small": "39.9375em",
+  "medium": "56.1875em",
+  "xlarge": "89.9375em",
+);
+
+$breakpoints-between: (
+  tablet: "(max-width: 56.25em) and (min-width: 40em)",
+);
+
+//The minimum width of the display area, such as a browser window
+@mixin breakpoint-up($size) {
+  @media (min-width: map-get($breakpoints-up,$size)) {
+    @content;
+  }
+}
+
+////max width of the display area, such as browser window
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints-down,$size)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-between($size) {
+  @media (map-get($breakpoints-between,tablet)) {
+    @content;
+  }
+}

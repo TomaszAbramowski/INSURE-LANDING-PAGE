@@ -1,0 +1,9 @@
+name: My Jekyll Website 
+baseurl: "insure-landing-page"
+sass:
+   sass_dir: _sass
+
+javascript:
+   javascript_dir: js
+
+

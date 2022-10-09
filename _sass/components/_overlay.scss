@@ -1,0 +1,10 @@
+@use "../abstracts/variable" as *;
+
+.overlay {
+  opacity: 0;
+  top: 17.5%;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: $veryDarkViolet;
+}
