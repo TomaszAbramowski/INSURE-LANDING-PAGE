@@ -1,5 +1,4 @@
-
- import nav from "/assets/js/views/nav.js";
+import nav from "/assets/js/views/nav.js";
  import footer from "/assets/js/views/footer.js";
 
 console.log("aaaaaaaaaaaa");
