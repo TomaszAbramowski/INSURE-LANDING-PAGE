@@ -34,8 +34,7 @@
   @include breakpoint-up(veryLarge) {
     padding-top: 5.1025rem;
     padding-bottom: 5.15rem;
-    margin-right: calc(1.525rem, 13.5vw - 1.65625rem, 10.25rem);
-
+    margin-right: clamp(#{"1.525rem, 13.5vw - 1.65625rem, 10.25rem"});
     padding-left: 5rem;
     padding-right: 5rem;
   }

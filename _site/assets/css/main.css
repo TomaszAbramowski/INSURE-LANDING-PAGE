@@ -418,7 +418,7 @@ source { display: block; }
 
 @media (min-width: 56.25em) { .more { padding-left: 5rem; padding-right: 4.875rem; } }
 
-@media (min-width: 90em) { .more { padding-top: 5.1025rem; padding-bottom: 5.15rem; margin-right: calc(1.525rem, 13.5vw - 1.65625rem, 10.25rem); padding-left: 5rem; padding-right: 5rem; } }
+@media (min-width: 90em) { .more { padding-top: 5.1025rem; padding-bottom: 5.15rem; margin-right: clamp(1.525rem, 13.5vw - 1.65625rem, 10.25rem); padding-left: 5rem; padding-right: 5rem; } }
 
 .more::before { content: ""; position: absolute; background-image: url("../images/bg-pattern-how-we-work-mobile.svg"); background-repeat: no-repeat; background-position: top right; top: 0; right: 0; height: 100%; width: 65%; z-index: 100; }
 
@@ -440,6 +440,6 @@ source { display: block; }
 
 @media (min-width: 40em) { .more--cta { width: 45%; max-width: 10rem; min-width: 160px; margin-bottom: 0.0625px; } }
 
-body { margin: 0 auto; min-width: 376px; }
+body { margin: 0 auto; min-width: 23.5rem; max-width: 90rem; }
 
 /*# sourceMappingURL=main.css.map */
