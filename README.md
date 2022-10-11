@@ -43,17 +43,19 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- Scss
+- SCSS
 - JavaScript
-- jekyll
+- Jekyll
+
 
 ### What I learned
 
-- Scss media query
-- Basic of animations and that I have to use visibility and opacity to make transions works
-- How to conver a site to Jekyll
+- SCSS media query
+- Basic of animations and that I have to use visibility and opacity to make transitions works
+- How to convert a site to Jekyll
 - Responsive image
-- Bundle file with webpack for jekyll(javascript)
+- Bundle file with webpack for Jekyll(JavaScript)
+
 
 ### Continued development
 This was my first project for "Frontend Mentor" website.
@@ -62,7 +64,7 @@ I'm going to make two more websites like this one to be able to feel comfortable
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/TomaszAbramowski)
 - Twitter - [Tomasz Abramowski](https://www.twitter.com/TomaszAbramows5)
 
 
