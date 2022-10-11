@@ -1,10 +1,5 @@
 import nav from "/assets/js/views/nav.js";
- import footer from "/assets/js/views/footer.js";
-
-console.log("aaaaaaaaaaaa");
-// if (module.hot) {
-//   module.hot.accept();
-// }
+import footer from "/assets/js/views/footer.js";
 
 const controler = () => {};
 controler();
@@ -17,5 +12,3 @@ const init = function () {
   footer.footerTest();
 };
 init();
-
-
