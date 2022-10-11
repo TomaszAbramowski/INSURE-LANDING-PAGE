@@ -64,7 +64,7 @@ I'm going to make two more websites like this one to be able to feel comfortable
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/TomaszAbramowski)
+- Frontend Mentor - [Tomasz Abramowski](https://www.frontendmentor.io/profile/TomaszAbramowski)
 - Twitter - [Tomasz Abramowski](https://www.twitter.com/TomaszAbramows5)
 
 
